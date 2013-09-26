@@ -85,6 +85,10 @@ package org.purepdf.pdf
 			put( PdfName.PRODUCER, new PdfString( PdfWriter.VERSION ) );
 		}
 		
+		public function addTrapped( trapped:Boolean = false ): void
+		{
+			put( PdfName.TRAPPED, new PdfName( trapped ? "True" : "False" ) );
+		}
 		public static function getCreationDate(): String
 		{
 			var date: Date = new Date();
